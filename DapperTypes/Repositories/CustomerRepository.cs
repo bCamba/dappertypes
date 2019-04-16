@@ -80,7 +80,7 @@ namespace DapperTypes.Repositories
 		public Customer GetFullCustomerWithStartingIdCol(int number)
 		{
 			var parameters = new DynamicParameters();
-			parameters.Add("@customerNumber", number, System.Data.DbType.Int16);
+			parameters.Add("@customerNumber", number, System.Data.DbType.Int32);
 
 			var types = new Type[]
 			{
