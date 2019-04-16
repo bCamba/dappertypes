@@ -1,12 +1,12 @@
 # dappertypes
- I was looking for examples of Dapper using its unlimited override and even though I found [an example which helped me to use it](https://stackoverflow.com/questions/10202584/using-dapper-to-map-more-than-5-types/17029996), I think a complete example could help someone lost on the internet. 
+ I was looking for examples of Dapper using its unlimited **Query** override and even though I found [an example which helped me to use it](https://stackoverflow.com/questions/10202584/using-dapper-to-map-more-than-5-types/17029996), I think a complete example could help someone lost on the internet. 
   This is a repository to show the implementation of a SQL query using dapper without restriction on the amount of types and subtypes in the query.
   
-  The test application is in the repository and was built using Visual Studio 2017 and .NET Core 2.2 with Dapper 1.60.6.
+  The test application is in the repository and was built using **Visual Studio 2017 and .NET Core 2.2 with Dapper 1.60.6**.
   
   I used a [SQL Server in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017&pivots=cs1-bash) to test.
   
-  Imagina a database modelled as follows (I know this is not the best way to model this database, but the purpose of this repository is to show the Dapper override only):
+  Imagina a database modelled as follows (*I know this is not the best way to model this database, but the purpose of this repository is to show the Dapper override only*):
   
   ![Database](/Images/DapperTypesDiagram.jpg)
   
@@ -38,8 +38,12 @@ INNER JOIN account ON account.id=customer.id_account
 WHERE
 	customer.number=@customerNumber"
 ```
+
  
  And the Dapper call to this query could be done as follows:
+ 
+ 
+
  ```
  var parameters = new DynamicParameters();
 parameters.Add("@customerNumber", number, System.Data.DbType.Int32);
