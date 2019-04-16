@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 public class MainClass
 {
 	//You may need to edit this connectionString variable to your DB connection string.
-	private readonly static string _connectionString = @"Data Source=192.168.99.100,1433;Initial Catalog=dapper_types;User ID=sa;Password=forwarDash11!;";
+	private readonly static string _connectionString = @"Data Source=192.168.99.100,1433;Initial Catalog=dapper_types;User ID=sa;Password=Your1Password!";
 
 	[TestMethod]
 	public void Test()

@@ -2,7 +2,6 @@
 using DapperTypes.Entities;
 using System;
 using System.IO;
-using System.Linq;
 
 namespace DapperTypes.Repositories
 {
